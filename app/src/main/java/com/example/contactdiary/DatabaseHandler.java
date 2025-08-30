@@ -51,7 +51,8 @@ public class DatabaseHandler {
                 name = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_name));
                 phone= cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_phone));
                 email= cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_email));
-                person = new ContactPerson(id,name,phone,email);
+                String id1= Integer.toString(id);
+                person = new ContactPerson(id1,name,phone,email);
                 persons.add(person);
                 cursor.moveToNext();
 
@@ -68,7 +69,7 @@ public class DatabaseHandler {
         values.put(DatabaseHelper.col_name,person.getName());
         values.put(DatabaseHelper.col_phone,person.getPhone());
         values.put(DatabaseHelper.col_email,person.getEmail());
-        int val = sqLiteDatabase.update(DatabaseHelper.TableName,values,DatabaseHelper.col_Id+" =? ",new String[]{Integer.toString(person.getId())});
+        int val = sqLiteDatabase.update(DatabaseHelper.TableName,values,DatabaseHelper.col_Id+" =? ",new String[]{person.getId()});
         this.close();
         if(val>0){
             return true;
@@ -107,7 +108,8 @@ public class DatabaseHandler {
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_name));
                 String phone = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_phone));
                 String email = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.col_email));
-               person = new ContactPerson(id,name,phone,email);
+                String id1=Integer.toString(id);
+               person = new ContactPerson(id1,name,phone,email);
                persons.add(person);
                cursor.moveToNext();
 

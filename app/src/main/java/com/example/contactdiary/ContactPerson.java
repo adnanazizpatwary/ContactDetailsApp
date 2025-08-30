@@ -1,7 +1,7 @@
 package com.example.contactdiary;
 
 public class ContactPerson {
-    private int id;
+    private String id;
     private String name,phone,email;
 
 
@@ -11,18 +11,18 @@ public class ContactPerson {
         this.email = email;
     }
 
-    public ContactPerson(int id, String name, String phone, String email) {
+    public ContactPerson(String id, String name, String phone, String email) {
         this.id = id;
         this.phone = phone;
         this.name = name;
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

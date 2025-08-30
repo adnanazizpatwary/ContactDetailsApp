@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 persons.clear();
                 for(DataSnapshot data : snapshot.getChildren()){
-                    int id = Integer.parseInt(data.getKey());
+                    String id = data.getKey();
                     String name = data.child("name").getValue(String.class);
                     String phone = data.child("phone").getValue(String.class);
                     String email = data.child("email").getValue(String.class);

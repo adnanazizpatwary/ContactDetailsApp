@@ -33,7 +33,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.Viwholder>
     @Override
     public void onBindViewHolder(@NonNull PersonAdapter.Viwholder holder, int position) {
         person = persons.get(position);
-        holder.tvId.setText(Integer.toString(person.getId()));
+        holder.tvId.setText(String.valueOf(position + 1));
         holder.tvName.setText(person.getName());
         holder.tvPhone.setText(person.getPhone());
         holder.tvEmail.setText(person.getEmail());
