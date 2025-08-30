@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "951752472716",
+    "project_id": "contactapp-2e9c6",
+    "storage_bucket": "contactapp-2e9c6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951752472716:android:596fb9b707865eb7c6a3a9",
+        "android_client_info": {
+          "package_name": "com.example.contactdiary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLB-0YPqU7bc1pyieuiw0YVISmA4SZFGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
