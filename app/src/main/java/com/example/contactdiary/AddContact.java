@@ -69,7 +69,8 @@ public class AddContact extends AppCompatActivity {
 
         }else{
             if(id>0){
-                ContactPerson person = new ContactPerson(id,name,phone,email);
+                String id1=Integer.toString(id);
+                ContactPerson person = new ContactPerson(id1,name,phone,email);
                 boolean status = databaseHandler.Update(person);
                 if(status){
                     dbRef.child(String.valueOf(id)).setValue(person);
